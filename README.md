@@ -5,9 +5,9 @@ Initially the application is loaded with three radio stations. User will be bale
 Strams of all radio stations will be stored in SQLite database. User will see the list of all radio stations on the main screen of the app.
 During installation, the application requests permission to access calls to monitor the status of the phone and turn off the radio during a phone conversation.
 
-<img src="https://gitlab.com/aTasja/radio2/tree/master/screens/splash.png"  height="360" width="190">
-<img src="https://gitlab.com/aTasja/radio2/tree/master/screens/radio_connecting.png"  height="360" width="190">
-<img src="https://gitlab.com/aTasja/radio2/tree/master/screens/edit.png" height="360"  width="190">
+<img src="https://github.com/aTasja/Radio2/blob/master/splash.png"  height="360" width="190">
+<img src="https://github.com/aTasja/Radio2/blob/master/radio_connecting.png"  height="360" width="190">
+<img src="https://github.com/aTasja/Radio2/blob/master/edit.png" height="360"  width="190">
 
 
 App will have four screens:
@@ -17,8 +17,8 @@ I. After launching, user will have seen splash screen.
 
 II. After splash screen user will have seen main screen with three loaded initially radios and buttons panel in the bottom of screen. Some of buttons are invisible in the current stage.
 
-<img src="https://gitlab.com/aTasja/radio2/tree/master/screens/panel_connecting.png"  width="250" height="40">
-<img src="https://gitlab.com/aTasja/radio2/tree/master/screens/panel_no_wifi.png"  width="250" height="40">
+<img src="https://github.com/aTasja/Radio2/blob/master/panel_connecting.png"  width="250" height="40">
+<img src="https://github.com/aTasja/Radio2/blob/master/panel_no_wifi.png"  width="250" height="40">
 
 - Progress bar /is visible only while radio is connecting/.
 - Play/stop 
