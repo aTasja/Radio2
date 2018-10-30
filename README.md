@@ -5,9 +5,7 @@ Initially the application is loaded with three radio stations. User will be bale
 Strams of all radio stations will be stored in SQLite database. User will see the list of all radio stations on the main screen of the app.
 During installation, the application requests permission to access calls to monitor the status of the phone and turn off the radio during a phone conversation.
 
-<img src="https://github.com/aTasja/Radio2/blob/master/edit.png" height="360"  width="190">
-<img src="https://github.com/aTasja/Radio2/blob/master/splash.png"  height="360" width="190"> <img src="https://github.com/aTasja/Radio2/blob/master/radio_connecting.png"  height="360" width="190"> <img src="https://github.com/aTasja/Radio2/blob/master/edit.png" height="360"  width="190">
-
+<img src="https://github.com/aTasja/Radio2/blob/master/splash.png"  height="360" width="190"> <img src="https://github.com/aTasja/Radio2/blob/master/radio_connecting.png"  height="360" width="190"> <img src="https://github.com/aTasja/Radio2/blob/master/settings.png" height="360"  width="190"> <img src="https://github.com/aTasja/Radio2/blob/master/edit.png" height="360"  width="190"> 
 
 App will have four screens:
 ---------------------------
@@ -35,7 +33,7 @@ Behaviour:
 	When the connection is restored the appropriate toast message will be showen, WiFi lost icon will became invisible and the radio will be reconnected.
 4. If user will have pushed on stop button - the radio will switch off.
 5. Pushing on setting button opens following options menu:
-		- Add - allows to add new radio station to the app
+	- Add - allows to add new radio station to the app
 	- Edit - allows to edit existing radio station
 	- Delete - allows to delete existing radio station from the app
 	- Share - allows to share radio title and stream of choosen radio station
