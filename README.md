@@ -34,8 +34,7 @@ Behaviour:
 	When the connection is restored the appropriate toast message will be showen, WiFi lost icon will became invisible and the radio will be reconnected.
 4. If user will have pushed on stop button - the radio will switch off.
 5. Pushing on setting button opens following options menu:
-<img src="https://github.com/aTasja/Radio2/blob/master/settings.png"  height="360" width="190">
-	- Add - allows to add new radio station to the app
+	<img src="https://github.com/aTasja/Radio2/blob/master/settings.png"  height="360" width="190">	- Add - allows to add new radio station to the app
 	- Edit - allows to edit existing radio station
 	- Delete - allows to delete existing radio station from the app
 	- Share - allows to share radio title and stream of choosen radio station
