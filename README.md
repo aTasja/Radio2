@@ -52,19 +52,18 @@ App have the following structure:
 
 ### ---SplashActivity class extends Activity--- <br/>
 - After installation, the application requests permission to access calls to monitor the status of the phone and turn off the radio during a phone conversation.
-- Launches the app and send intent to RadioActivity class to start.<br/>
-<br/>
+- Launches the app and send intent to RadioActivity class to start.
 
 ### ---MainActivity class extends Activity---  <br/>
-- Launches main screen of app.<br/>
-- Handle all button mode changes, including progress bar.<br/>
-- Send intent to MediaPlayerService class to connect radio.<br/>
-- Have three BroadcastReceivers (dynamically registered) <br/>
-	a) to receive messages from Service about Radio connecting.<br/>
-	b) to receive messages about Internet connectivity of device.<br/>
-	c) to receive messages about Phone status (OFFHOOK, IDLE, RINGING). <br/>
-- Stops service.<br/>
-<br/>
+- Launch main screen of app.<br/>
+- Handle all button mode changes, including progress bar.
+- Send intent to MediaPlayerService class to connect radio.
+- Have three BroadcastReceivers (dynamically registered) 
+	a) to receive messages from Service about Radio connecting.
+	b) to receive messages about Internet connectivity of device.
+	c) to receive messages about Phone status (OFFHOOK, IDLE, RINGING). 
+- Start EditActivity for result when user press add or edit button in settings menu.
+- Stops service.
 
 ### ---MediaPlayerService class extends IntentService---  <br/>
 - From starting intent gets radio stream and starts MediaPlayer.
@@ -72,9 +71,9 @@ App have the following structure:
 - Create Notification for top bar.
 
 ### ---EditActivity class---  <br/>
-- Launches edit screen.<br/>
-- Allows to enter new or change existing title and stram as new or in plase of selected radio station.
-- If stream is valid and title and stream are unique for all app, radio station will be saved in database and MainActivity will starts again.
+- Launch edit screen for result.
+- Allow to enter new or change existing title and stram as new or in plase of selected radio station.
+- If stream is valid and title and stream are unique for the database, radio station will be passed to MainActivity as result for saving it in database. If so EditActivity will be destroyed. 
 - Otherwice or if title or URL is empty user will see appropriate toast message and stay in the same screen.
 
 ### ---RadioRecord class---  <br/>
@@ -87,7 +86,7 @@ App have the following structure:
 - The database helper used by the Radio Provider to create and manage its underlying SQLite database.
 
 ### ---RadioProvider class extends ContentProvider---  <br/>
-- Implements a Content Provider used to manage Radio Stations in database.
+- Implement a Content Provider used to manage Radio Stations in database.
 
 ### ---RadioOps class--- <br/>
 - Support class that consolidates and simplifies operations on the RadioContentProvider.
