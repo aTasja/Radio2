@@ -5,7 +5,7 @@ Initially the application is loaded with three radio stations. User will be bale
 Strams of all radio stations will be stored in SQLite database. User will see the list of all radio stations on the main screen of the app.
 During installation, the application requests permission to access calls to monitor the status of the phone and turn off the radio during a phone conversation.
 
-<img src="https://github.com/aTasja/Radio2/blob/master/splash.png"  height="340" width="180"> <img src="https://github.com/aTasja/Radio2/blob/master/radio_connecting.png"  height="340" width="180"> <img src="https://github.com/aTasja/Radio2/blob/master/settings.png" height="340"  width="180"> <img src="https://github.com/aTasja/Radio2/blob/master/edit.png" height="340"  width="180"> <img src="https://github.com/aTasja/Radio2/blob/master/add.png" height="340"  width="180"> 
+<img src="https://github.com/aTasja/Radio2/blob/master/splash.png"  height="330" width="170"> <img src="https://github.com/aTasja/Radio2/blob/master/radio_connecting.png"  height="330" width="170"> <img src="https://github.com/aTasja/Radio2/blob/master/settings.png" height="330"  width="170"> <img src="https://github.com/aTasja/Radio2/blob/master/edit.png" height="330"  width="170"> <img src="https://github.com/aTasja/Radio2/blob/master/add.png" height="330"  width="170"> 
 
 App will have three screens:
 ---------------------------
