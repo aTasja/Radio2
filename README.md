@@ -14,8 +14,8 @@ I. After launching, user will have seen splash screen.
 
 II. After splash screen user will have seen main screen with three loaded initially radios and buttons panel in the bottom of screen. Some of buttons are invisible in the current stage.
 
-<img src="https://github.com/aTasja/Radio2/blob/panel_connecting.png"  width="250" height="40">
-<img src="https://github.com/aTasja/Radio2/blob/panel_no_wifi.png"  width="250" height="40">
+<img src="https://github.com/aTasja/Radio2/blob/master/panel_connecting.png"  width="250" height="40">
+<img src="https://github.com/aTasja/Radio2/blob/master/panel_no_wifi.png"  width="250" height="40">
 
 - Progress bar /is visible only while radio is connecting/.
 - Play/stop 
