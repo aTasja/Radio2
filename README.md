@@ -5,16 +5,17 @@ Initially the application is loaded with three radio stations. User will be bale
 Strams of all radio stations will be stored in SQLite database. User will see the list of all radio stations on the main screen of the app.
 During installation, the application requests permission to access calls to monitor the status of the phone and turn off the radio during a phone conversation.
 
-<img src="https://github.com/aTasja/Radio2/blob/master/splash.png"  height="360" width="190"> <img src="https://github.com/aTasja/Radio2/blob/master/radio_connecting.png"  height="360" width="190"> <img src="https://github.com/aTasja/Radio2/blob/master/settings.png" height="360"  width="190"> <img src="https://github.com/aTasja/Radio2/blob/master/edit.png" height="360"  width="190"> 
+<img src="https://github.com/aTasja/Radio2/blob/master/splash.png"  height="360" width="190"> <img src="https://github.com/aTasja/Radio2/blob/master/radio_connecting.png"  height="360" width="190"> <img src="https://github.com/aTasja/Radio2/blob/master/settings.png" height="360"  width="190"> <img src="https://github.com/aTasja/Radio2/blob/master/edit.png" height="360"  width="190"> <img src="https://github.com/aTasja/Radio2/blob/master/add.png" height="360"  width="190"> 
 
-App will have four screens:
+App will have three screens:
 ---------------------------
 
 I. After launching, user will have seen splash screen.
 
 II. After splash screen user will have seen main screen with three loaded initially radios and buttons panel in the bottom of screen. Some of buttons are invisible in the current stage.
 
-<img src="https://github.com/aTasja/Radio2/blob/master/panel_connecting.png"  width="250" height="40"> <img src="https://github.com/aTasja/Radio2/blob/master/panel_no_wifi.png"  width="250" height="40">
+<img src="/screens/panel_connecting.png"  width="250" height="40">
+<img src="/screens/panel_no_wifi.png"  width="250" height="40">
 
 - Progress bar /is visible only while radio is connecting/.
 - Play/stop 
@@ -22,7 +23,7 @@ II. After splash screen user will have seen main screen with three loaded initia
 - Settings 
 - Exit 
 
-III. The 2rd screen is visible after pressing add or edit buttons on main screen. It allows to user enter title and stream of radio and save them for the App.
+III. Add/Edit screen is visible after pressing add or edit buttons on main screen. It allows to user enter title and stream of radio and save them for the App.
 
 Behaviour:
 ----------
@@ -52,18 +53,17 @@ App have the following structure:
 
 ### ---SplashActivity class extends Activity--- <br/>
 - After installation, the application requests permission to access calls to monitor the status of the phone and turn off the radio during a phone conversation.
-- Launches the app and send intent to RadioActivity class to start.
+- Launches the app and send intent to RadioActivity class to start.<br/>
 
 ### ---MainActivity class extends Activity---  <br/>
-- Launch main screen of app.<br/>
+- Launches main screen of app.<br/>
 - Handle all button mode changes, including progress bar.
 - Send intent to MediaPlayerService class to connect radio.
-- Have three BroadcastReceivers (dynamically registered) 
+- Have two BroadcastReceivers (dynamically registered)
 	a) to receive messages from Service about Radio connecting.
 	b) to receive messages about Internet connectivity of device.
-	c) to receive messages about Phone status (OFFHOOK, IDLE, RINGING). 
-- Start EditActivity for result when user press add or edit button in settings menu.
-- Stops service.
+- Have one static BroadcastReceiver to receive messages about Phone status (IDLE, RINGING). 
+- Stops service.<br/>
 
 ### ---MediaPlayerService class extends IntentService---  <br/>
 - From starting intent gets radio stream and starts MediaPlayer.
@@ -71,9 +71,9 @@ App have the following structure:
 - Create Notification for top bar.
 
 ### ---EditActivity class---  <br/>
-- Launch edit screen for result.
-- Allow to enter new or change existing title and stram as new or in plase of selected radio station.
-- If stream is valid and title and stream are unique for the database, radio station will be passed to MainActivity as result for saving it in database. If so EditActivity will be destroyed. 
+- Launches edit screen.<br/>
+- Allows to enter new or change existing title and stram as new or in plase of selected radio station.
+- If stream is valid and title and stream are unique for all app, radio station will be saved in database and MainActivity will starts again.
 - Otherwice or if title or URL is empty user will see appropriate toast message and stay in the same screen.
 
 ### ---RadioRecord class---  <br/>
@@ -86,7 +86,7 @@ App have the following structure:
 - The database helper used by the Radio Provider to create and manage its underlying SQLite database.
 
 ### ---RadioProvider class extends ContentProvider---  <br/>
-- Implement a Content Provider used to manage Radio Stations in database.
+- Implements a Content Provider used to manage Radio Stations in database.
 
 ### ---RadioOps class--- <br/>
 - Support class that consolidates and simplifies operations on the RadioContentProvider.
@@ -94,6 +94,8 @@ App have the following structure:
 ### ---SettingsSpinnerAdapter class extends BaseAdapter--- <br/>
 - Adapter class used to customize settings menu items to contain images.
 
+### ---CallReceiver class extends BroadcastReceiver--- <br/>
+- BroadcastReceiver to receive messages about Phone status (IDLE, RINGING). Send local broadcasts to MainActivity.
 
 
 
