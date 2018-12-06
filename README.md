@@ -1,3 +1,5 @@
+<img src="https://github.com/aTasja/Radio2/blob/master/ICON_radio2.png"  height="500" width="1000">
+
 Radio2 
 =====================================
 Link to GooglePlay - https://play.google.com/store/apps/details?id=ashatova.radio2
