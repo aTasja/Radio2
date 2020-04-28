@@ -2,7 +2,7 @@
 
 Radio2 
 =====================================
-https://play.google.com/store/apps/details?id=ashatova.radio2
+[GooglePlay](https://play.google.com/store/apps/details?id=ashatova.radio2)
 -----------------------------------------------------------------------------------
 App allows to listen to radio stations. For this work device should be connected to the Internet. 
 Initially the application is loaded with three radio stations. User will be bale to add, edit and delete radio station at will. 
